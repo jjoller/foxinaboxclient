@@ -21,7 +21,7 @@ public class ExampleClient {
 
 		Map<String, PlayerModel> models = new HashMap<String, PlayerModel>();
 		models.put("RandomPlayer", new RandomPlayerModel());
-		models.put("FIABServer", new FIABPlayerModel("testkey", "mytable"));
+		models.put("FIABServer", new FIABPlayerModel("testkey", "mytable", FIABPlayerModel.localServerURL));
 
 		int stack = 10000;
 		List<Player> players = new ArrayList<Player>();
@@ -36,7 +36,6 @@ public class ExampleClient {
 			table.performStep();
 			System.out.println((table.getCurrHand()));
 		}
-
 	}
 
 }
